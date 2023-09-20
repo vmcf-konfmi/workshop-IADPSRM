@@ -8,6 +8,7 @@ options:  # The options key will be applied to all chapters, but not sub-section
   numbered: False
 
 chapters:
+- file: years/y2024
 - file: years/y2023
 - file: years/y2022
 - file: years/y2021
