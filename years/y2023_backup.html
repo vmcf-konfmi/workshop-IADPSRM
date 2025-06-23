@@ -1,13 +1,12 @@
 
-
 <!DOCTYPE html>
 
 
-<html lang="en" data-content_root="" >
+<html lang="en" data-content_root="../" >
 
   <head>
     <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.18.1: http://docutils.sourceforge.net/" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
     <title>Image Analysis and Data Processing (not only) in Super-Resolution Microscopy 2023 &#8212; Image Analysis and Data Processing in Super-Resolution Microscopy</title>
   
@@ -15,47 +14,45 @@
   
   <script data-cfasync="false">
     document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
-    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
   </script>
   
   <!-- Loaded before other Sphinx assets -->
-  <link href="../_static/styles/theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/bootstrap.css?digest=5b4479735964841361fd" rel="stylesheet" />
-<link href="../_static/styles/pydata-sphinx-theme.css?digest=5b4479735964841361fd" rel="stylesheet" />
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
 
   
-  <link href="../_static/vendor/fontawesome/6.1.2/css/all.min.css?digest=5b4479735964841361fd" rel="stylesheet" />
-  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-solid-900.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-brands-400.woff2" />
-<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.1.2/webfonts/fa-regular-400.woff2" />
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
 
-    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
-    <link rel="stylesheet" href="../_static/styles/sphinx-book-theme.css?digest=14f4ca6b54d191a8c7657f6c759bf11a5fb86285" type="text/css" />
-    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
     <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
-    <link rel="stylesheet" type="text/css" href="../_static/design-style.4045f2051d55cab465a707391d5b2007.min.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
   
   <!-- Pre-loaded scripts that we'll load fully later -->
-  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd" />
-<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd" />
-  <script src="../_static/vendor/fontawesome/6.1.2/js/all.min.js?digest=5b4479735964841361fd"></script>
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
 
-    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-    <script src="../_static/jquery.js"></script>
-    <script src="../_static/underscore.js"></script>
-    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-    <script src="../_static/doctools.js"></script>
-    <script src="../_static/clipboard.min.js"></script>
-    <script src="../_static/copybutton.js"></script>
-    <script src="../_static/scripts/sphinx-book-theme.js?digest=5a5c038af52cf7bc1a1ec88eea08e6366ee68824"></script>
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
     <script>let toggleHintShow = 'Click to show';</script>
     <script>let toggleHintHide = 'Click to hide';</script>
     <script>let toggleOpenOnPrint = 'true';</script>
-    <script src="../_static/togglebutton.js"></script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
     <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
-    <script src="../_static/design-tabs.js"></script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
     <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4LMQCGKP1G"></script>
     <script>
                 window.dataLayer = window.dataLayer || [];
@@ -63,12 +60,16 @@
                 gtag('js', new Date());
                 gtag('config', 'G-4LMQCGKP1G');
             </script>
-    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"
-const thebe_selector = ".thebe,.cell"
-const thebe_selector_input = "pre"
-const thebe_selector_output = ".output, .cell_output"
-</script>
-    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-4LMQCGKP1G');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
     <script>DOCUMENTATION_OPTIONS.pagename = 'years/y2023_backup';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
@@ -81,28 +82,23 @@ const thebe_selector_output = ".output, .cell_output"
 
   
   
-  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
   
   <div id="pst-scroll-pixel-helper"></div>
-
   
   <button type="button" class="btn rounded-pill" id="pst-back-to-top">
-    <i class="fa-solid fa-arrow-up"></i>
-    Back to top
-  </button>
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
 
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__primary"
-          id="__primary"/>
-  <label class="overlay overlay-primary" for="__primary"></label>
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
   
   <input type="checkbox"
           class="sidebar-toggle"
-          name="__secondary"
-          id="__secondary"/>
-  <label class="overlay overlay-secondary" for="__secondary"></label>
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
   
   <div class="search-button__wrapper">
     <div class="search-button__overlay"></div>
@@ -124,12 +120,22 @@ const thebe_selector_output = ".output, .cell_output"
   <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
 </form></div>
   </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
   
-    <nav class="bd-header navbar navbar-expand-lg bd-navbar">
-    </nav>
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
   
+
   <div class="bd-container">
     <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
       
       <div class="bd-sidebar-primary bd-sidebar">
         
@@ -145,6 +151,8 @@ const thebe_selector_output = ".output, .cell_output"
     <div class="sidebar-primary-items__start sidebar-primary__section">
         <div class="sidebar-primary-item">
 
+  
+    
   
 
 <a class="navbar-brand logo" href="../intro.html">
@@ -163,7 +171,18 @@ const thebe_selector_output = ".output, .cell_output"
   
   
 </a></div>
-        <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
     <div class="bd-toc-item navbar-nav active">
         
         <ul class="nav bd-sidenav bd-sidenav__home-link">
@@ -174,6 +193,7 @@ const thebe_selector_output = ".output, .cell_output"
             </li>
         </ul>
         <ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="y2025.html">BioImage Analysis and Data Processing Workshop 2025</a></li>
 <li class="toctree-l1"><a class="reference internal" href="y2024.html">BioImage Analysis and Data Processing 2024</a></li>
 <li class="toctree-l1"><a class="reference internal" href="y2023.html">Image Analysis and Data Processing (not only) in Super-Resolution Microscopy 2023</a></li>
 <li class="toctree-l1"><a class="reference internal" href="y2022.html">Image Analysis and Data Processing in Super-Resolution Microscopy 2022</a></li>
@@ -194,7 +214,7 @@ const thebe_selector_output = ".output, .cell_output"
 
       </div>
       
-      <main id="main-content" class="bd-main">
+      <main id="main-content" class="bd-main" role="main">
         
         
 
@@ -203,14 +223,14 @@ const thebe_selector_output = ".output, .cell_output"
           <div class="bd-content">
             <div class="bd-article-container">
               
-              <div class="bd-header-article">
+              <div class="bd-header-article d-print-none">
 <div class="header-article-items header-article__inner">
   
     <div class="header-article-items__start">
       
-        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
   <span class="fa-solid fa-bars"></span>
-</label></div>
+</button></div>
       
     </div>
   
@@ -335,10 +355,10 @@ const thebe_selector_output = ".output, .cell_output"
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
-    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
   </button>
 `);
 </script>
@@ -346,14 +366,14 @@ document.write(`
 
 <script>
 document.write(`
-  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <i class="fa-solid fa-magnifying-glass fa-lg"></i>
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
     <span class="fa-solid fa-list"></span>
-</label>
+</button>
 </div></div>
       
     </div>
@@ -432,26 +452,26 @@ document.write(`
               
                 
 <div id="searchbox"></div>
-                <article class="bd-article" role="main">
+                <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="image-analysis-and-data-processing-not-only-in-super-resolution-microscopy-2023">
-<h1>Image Analysis and Data Processing (not only) in Super-Resolution Microscopy 2023<a class="headerlink" href="#image-analysis-and-data-processing-not-only-in-super-resolution-microscopy-2023" title="Permalink to this heading">#</a></h1>
+<h1>Image Analysis and Data Processing (not only) in Super-Resolution Microscopy 2023<a class="headerlink" href="#image-analysis-and-data-processing-not-only-in-super-resolution-microscopy-2023" title="Link to this heading">#</a></h1>
 <section id="preliminary-program">
-<h2>Preliminary program<a class="headerlink" href="#preliminary-program" title="Permalink to this heading">#</a></h2>
+<h2>Preliminary program<a class="headerlink" href="#preliminary-program" title="Link to this heading">#</a></h2>
 <p>Program 21.8. – 25.8. 2023</p>
 <p>PLACE: Vinicna 7, Prague 2, ROOM B2, 311</p>
 <p>FORM: a hybrid form of presentation, (hands-on in-person only)</p>
 </section>
 <section id="day-1">
-<h2>Day 1<a class="headerlink" href="#day-1" title="Permalink to this heading">#</a></h2>
+<h2>Day 1<a class="headerlink" href="#day-1" title="Link to this heading">#</a></h2>
 <section id="registration">
-<h3><strong>10:00 - 11:00 Registration</strong><a class="headerlink" href="#registration" title="Permalink to this heading">#</a></h3>
+<h3><strong>10:00 - 11:00 Registration</strong><a class="headerlink" href="#registration" title="Link to this heading">#</a></h3>
 </section>
 <section id="welcome-note-in-vmcf-martin-schatz-ph-d-miroslav-hylis-ph-d-zuzana-burdikova-ph-d">
-<h3><strong>11:00 – 11:15	Welcome note in VMCF (Martin Schätz,Ph.D., Miroslav Hyliš,Ph.D., Zuzana Burdikova,Ph.D.)</strong><a class="headerlink" href="#welcome-note-in-vmcf-martin-schatz-ph-d-miroslav-hylis-ph-d-zuzana-burdikova-ph-d" title="Permalink to this heading">#</a></h3>
+<h3><strong>11:00 – 11:15	Welcome note in VMCF (Martin Schätz,Ph.D., Miroslav Hyliš,Ph.D., Zuzana Burdikova,Ph.D.)</strong><a class="headerlink" href="#welcome-note-in-vmcf-martin-schatz-ph-d-miroslav-hylis-ph-d-zuzana-burdikova-ph-d" title="Link to this heading">#</a></h3>
 </section>
 <section id="introduction-to-super-resolution-microscopy-methods-principles-theoretical-background-zuzana-burdikova-ph-d">
-<h3><strong>11:20 – 12:00	Introduction to super-resolution microscopy: methods, principles, theoretical background (Zuzana Burdíková, Ph.D.)</strong><a class="headerlink" href="#introduction-to-super-resolution-microscopy-methods-principles-theoretical-background-zuzana-burdikova-ph-d" title="Permalink to this heading">#</a></h3>
+<h3><strong>11:20 – 12:00	Introduction to super-resolution microscopy: methods, principles, theoretical background (Zuzana Burdíková, Ph.D.)</strong><a class="headerlink" href="#introduction-to-super-resolution-microscopy-methods-principles-theoretical-background-zuzana-burdikova-ph-d" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Image Formation in Fluorescence Microscopy</p></li>
 <li><p>Resolution and Noise</p></li>
@@ -461,11 +481,11 @@ document.write(`
 <p><strong>12:00 – 13:20	Lunch</strong></p>
 </section>
 <section id="introduction-to-image-processing-karel-stepka-ph-d-faculty-of-informatics-muni">
-<h3><strong>13:30 – 14:00 Introduction to image processing (Karel Štěpka, Ph.D., Faculty of Informatics, MUNI)</strong><a class="headerlink" href="#introduction-to-image-processing-karel-stepka-ph-d-faculty-of-informatics-muni" title="Permalink to this heading">#</a></h3>
+<h3><strong>13:30 – 14:00 Introduction to image processing (Karel Štěpka, Ph.D., Faculty of Informatics, MUNI)</strong><a class="headerlink" href="#introduction-to-image-processing-karel-stepka-ph-d-faculty-of-informatics-muni" title="Link to this heading">#</a></h3>
 <p><strong>14:00 – 14:10	Coffee break</strong></p>
 </section>
 <section id="image-processing-in-fiji-imagej-karel-stepka-ph-d-faculty-of-informatics-muni">
-<h3><strong>14:10 – 15:20	Image processing in FIJI, ImageJ (Karel Štěpka, Ph.D. Faculty of Informatics, MUNI)</strong><a class="headerlink" href="#image-processing-in-fiji-imagej-karel-stepka-ph-d-faculty-of-informatics-muni" title="Permalink to this heading">#</a></h3>
+<h3><strong>14:10 – 15:20	Image processing in FIJI, ImageJ (Karel Štěpka, Ph.D. Faculty of Informatics, MUNI)</strong><a class="headerlink" href="#image-processing-in-fiji-imagej-karel-stepka-ph-d-faculty-of-informatics-muni" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Two-channel colocalization (mitochondrial and membrane labeling)</p></li>
 <li><p>a p-Value of colocalization, data filtering</p></li>
@@ -479,24 +499,24 @@ document.write(`
 </ul>
 </section>
 <section id="optional-imagej-and-thunderstorm-installation-zuzana-burdikova-martin-schatz-peter-hoboth">
-<h3><strong>15:20 – 16:00	Optional - ImageJ and Thunderstorm Installation (Zuzana Burdíková, Martin Schätz, Peter Hoboth)</strong><a class="headerlink" href="#optional-imagej-and-thunderstorm-installation-zuzana-burdikova-martin-schatz-peter-hoboth" title="Permalink to this heading">#</a></h3>
+<h3><strong>15:20 – 16:00	Optional - ImageJ and Thunderstorm Installation (Zuzana Burdíková, Martin Schätz, Peter Hoboth)</strong><a class="headerlink" href="#optional-imagej-and-thunderstorm-installation-zuzana-burdikova-martin-schatz-peter-hoboth" title="Link to this heading">#</a></h3>
 <p><strong>16:00 – 16:15 Coffee break</strong></p>
 </section>
 <section id="optional-facility-tour-konfmi-zeiss-elyra-ps-zeiss-axio-scan-leica-tcs-sp8-ondrej-sebesta-zuzana-burdikova-peter-hoboth">
-<h3><strong>16:15 – 17:00	Optional: Facility tour - KONFMI: Zeiss Elyra PS, Zeiss Axio Scan, Leica TCS SP8 (Ondřej Šebesta, Zuzana Burdíková, Peter Hoboth)</strong><a class="headerlink" href="#optional-facility-tour-konfmi-zeiss-elyra-ps-zeiss-axio-scan-leica-tcs-sp8-ondrej-sebesta-zuzana-burdikova-peter-hoboth" title="Permalink to this heading">#</a></h3>
+<h3><strong>16:15 – 17:00	Optional: Facility tour - KONFMI: Zeiss Elyra PS, Zeiss Axio Scan, Leica TCS SP8 (Ondřej Šebesta, Zuzana Burdíková, Peter Hoboth)</strong><a class="headerlink" href="#optional-facility-tour-konfmi-zeiss-elyra-ps-zeiss-axio-scan-leica-tcs-sp8-ondrej-sebesta-zuzana-burdikova-peter-hoboth" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Refreshment included</p></li>
 </ul>
 </section>
 </section>
 <section id="day-2">
-<h2><strong>Day 2</strong><a class="headerlink" href="#day-2" title="Permalink to this heading">#</a></h2>
+<h2><strong>Day 2</strong><a class="headerlink" href="#day-2" title="Link to this heading">#</a></h2>
 <section id="data-management-martin-schatz">
-<h3><strong>10:00 – 10:30 Data Management (Martin Schätz)</strong><a class="headerlink" href="#data-management-martin-schatz" title="Permalink to this heading">#</a></h3>
+<h3><strong>10:00 – 10:30 Data Management (Martin Schätz)</strong><a class="headerlink" href="#data-management-martin-schatz" title="Link to this heading">#</a></h3>
 <p><strong>10:30 – 10:40	Coffee break</strong></p>
 </section>
 <section id="thunderstorm-a-comprehensive-imagej-plug-in-for-smlm-data-analysis-and-super-resolution-imaging-zdenek-svindrych-ph-d-dartmouth-college-https-zitmen-github-io-thunderstorm">
-<h3><strong>10:40 – 12:00 ThunderSTORM: a comprehensive ImageJ plug-in for SMLM data analysis and super-resolution imaging (Zdeněk Švindrych,Ph.D., Dartmouth College) <a class="reference external" href="https://zitmen.github.io/thunderstorm/">https://zitmen.github.io/thunderstorm/</a></strong><a class="headerlink" href="#thunderstorm-a-comprehensive-imagej-plug-in-for-smlm-data-analysis-and-super-resolution-imaging-zdenek-svindrych-ph-d-dartmouth-college-https-zitmen-github-io-thunderstorm" title="Permalink to this heading">#</a></h3>
+<h3><strong>10:40 – 12:00 ThunderSTORM: a comprehensive ImageJ plug-in for SMLM data analysis and super-resolution imaging (Zdeněk Švindrych,Ph.D., Dartmouth College) <a class="reference external" href="https://zitmen.github.io/thunderstorm/">https://zitmen.github.io/thunderstorm/</a></strong><a class="headerlink" href="#thunderstorm-a-comprehensive-imagej-plug-in-for-smlm-data-analysis-and-super-resolution-imaging-zdenek-svindrych-ph-d-dartmouth-college-https-zitmen-github-io-thunderstorm" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Single Molecule Localisation (briefly)</p></li>
 <li><p>The idea behind ThunderSTORM</p></li>
@@ -507,7 +527,7 @@ document.write(`
 <p><strong>12:00 – 13:00	Lunch</strong></p>
 </section>
 <section id="scientific-lecture-quantitative-super-resolution-microscopy-reveals-nuclear-architecture-in-cells-and-tissues-peter-hoboth-ph-d">
-<h3><strong>13:00 – 13:40	Scientific lecture: Quantitative super-resolution microscopy reveals nuclear architecture in cells and tissues (Peter Hoboth, Ph.D.)</strong><a class="headerlink" href="#scientific-lecture-quantitative-super-resolution-microscopy-reveals-nuclear-architecture-in-cells-and-tissues-peter-hoboth-ph-d" title="Permalink to this heading">#</a></h3>
+<h3><strong>13:00 – 13:40	Scientific lecture: Quantitative super-resolution microscopy reveals nuclear architecture in cells and tissues (Peter Hoboth, Ph.D.)</strong><a class="headerlink" href="#scientific-lecture-quantitative-super-resolution-microscopy-reveals-nuclear-architecture-in-cells-and-tissues-peter-hoboth-ph-d" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Brief summary of SRM and overview of the quantitative approaches.</p></li>
 <li><p>Pros and cons of different SRM techniques to quantitatively study the nuclear antigens in cells and tissues.</p></li>
@@ -517,7 +537,7 @@ document.write(`
 <p><strong>Practical part</strong></p>
 </section>
 <section id="thunderstorm-hands-on-sessions-individual-work-with-thunderstorm-software-zdenek-svindrych-ondrej-sebesta-zuzana-burdikova-martin-schatz-peter-hoboth">
-<h3><strong>14:00 – 16:00	ThunderSTORM hands-on sessions: Individual work with ThunderSTORM software (Zdeněk Švindrych, Ondřej Šebesta, Zuzana Burdíková, Martin Schätz, Peter Hoboth)</strong><a class="headerlink" href="#thunderstorm-hands-on-sessions-individual-work-with-thunderstorm-software-zdenek-svindrych-ondrej-sebesta-zuzana-burdikova-martin-schatz-peter-hoboth" title="Permalink to this heading">#</a></h3>
+<h3><strong>14:00 – 16:00	ThunderSTORM hands-on sessions: Individual work with ThunderSTORM software (Zdeněk Švindrych, Ondřej Šebesta, Zuzana Burdíková, Martin Schätz, Peter Hoboth)</strong><a class="headerlink" href="#thunderstorm-hands-on-sessions-individual-work-with-thunderstorm-software-zdenek-svindrych-ondrej-sebesta-zuzana-burdikova-martin-schatz-peter-hoboth" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Group 1: beginners (Zuzana Burdíková, KONFMI, PřFUK)</p></li>
 <li><p>Group 2: intermediate (Ondřej Šebesta, KONFMI, PřFUK)</p></li>
@@ -526,47 +546,47 @@ document.write(`
 <p>The coffee break included Refreshments included</p>
 </section>
 <section id="introduction-to-ilastik-martin-schatz">
-<h3><strong>16:00 – 16:30	Introduction to Ilastik (Martin Schätz)</strong><a class="headerlink" href="#introduction-to-ilastik-martin-schatz" title="Permalink to this heading">#</a></h3>
+<h3><strong>16:00 – 16:30	Introduction to Ilastik (Martin Schätz)</strong><a class="headerlink" href="#introduction-to-ilastik-martin-schatz" title="Link to this heading">#</a></h3>
 </section>
 <section id="informal-discussion-in-the-academic-club">
-<h3><strong>19:00 – 22:00	Informal discussion in the Academic Club</strong><a class="headerlink" href="#informal-discussion-in-the-academic-club" title="Permalink to this heading">#</a></h3>
+<h3><strong>19:00 – 22:00	Informal discussion in the Academic Club</strong><a class="headerlink" href="#informal-discussion-in-the-academic-club" title="Link to this heading">#</a></h3>
 <p>Refreshment included</p>
 </section>
 </section>
 <section id="day-3">
-<h2><strong>Day 3</strong><a class="headerlink" href="#day-3" title="Permalink to this heading">#</a></h2>
+<h2><strong>Day 3</strong><a class="headerlink" href="#day-3" title="Link to this heading">#</a></h2>
 <section id="customizing-fiji-imagej-with-imagej-macro-marcelo-leomil-zoccoler-ph-d-tu-dresden">
-<h3><strong>10:00 – 11:00	Customizing Fiji/ImageJ with ImageJ Macro (Marcelo Leomil Zoccoler, Ph.D., TU Dresden)</strong><a class="headerlink" href="#customizing-fiji-imagej-with-imagej-macro-marcelo-leomil-zoccoler-ph-d-tu-dresden" title="Permalink to this heading">#</a></h3>
+<h3><strong>10:00 – 11:00	Customizing Fiji/ImageJ with ImageJ Macro (Marcelo Leomil Zoccoler, Ph.D., TU Dresden)</strong><a class="headerlink" href="#customizing-fiji-imagej-with-imagej-macro-marcelo-leomil-zoccoler-ph-d-tu-dresden" title="Link to this heading">#</a></h3>
 </section>
 <section id="interactive-design-of-gpu-accelerated-image-data-flow-graphs-in-fiji-marcelo-leomil-zoccoler-tu-dresden-with-hands-on-assisting-zuzana-burdikova-ondrej-sebesta-zdenek-svindrych-martin-schatz">
-<h3><strong>11:00 – 12:00	Interactive Design of GPU-accelerated Image Data Flow Graphs in Fiji (Marcelo Leomil Zoccoler, TU Dresden)  with Hands-on assisting: Zuzana Burdíková, Ondřej Šebesta, Zdeněk Švindrych, Martin Schätz)</strong><a class="headerlink" href="#interactive-design-of-gpu-accelerated-image-data-flow-graphs-in-fiji-marcelo-leomil-zoccoler-tu-dresden-with-hands-on-assisting-zuzana-burdikova-ondrej-sebesta-zdenek-svindrych-martin-schatz" title="Permalink to this heading">#</a></h3>
+<h3><strong>11:00 – 12:00	Interactive Design of GPU-accelerated Image Data Flow Graphs in Fiji (Marcelo Leomil Zoccoler, TU Dresden)  with Hands-on assisting: Zuzana Burdíková, Ondřej Šebesta, Zdeněk Švindrych, Martin Schätz)</strong><a class="headerlink" href="#interactive-design-of-gpu-accelerated-image-data-flow-graphs-in-fiji-marcelo-leomil-zoccoler-tu-dresden-with-hands-on-assisting-zuzana-burdikova-ondrej-sebesta-zdenek-svindrych-martin-schatz" title="Link to this heading">#</a></h3>
 <p><strong>12:00 – 13:00	Lunch</strong></p>
 </section>
 <section id="introduction-to-sim-and-uc2-microscope-prof-dr-rainer-heintzmann-ipht-jena">
-<h3><strong>13:00- 14:00 Introduction to SIM and UC2 Microscope (Prof. Dr.Rainer Heintzmann, IPHT, Jena)</strong><a class="headerlink" href="#introduction-to-sim-and-uc2-microscope-prof-dr-rainer-heintzmann-ipht-jena" title="Permalink to this heading">#</a></h3>
+<h3><strong>13:00- 14:00 Introduction to SIM and UC2 Microscope (Prof. Dr.Rainer Heintzmann, IPHT, Jena)</strong><a class="headerlink" href="#introduction-to-sim-and-uc2-microscope-prof-dr-rainer-heintzmann-ipht-jena" title="Link to this heading">#</a></h3>
 <p><strong>14:00 – 14:30	Coffee break</strong></p>
 </section>
 <section id="practical-demonstration-of-uc2-benedict-diedetrich-ph-d-ipht-jena">
-<h3><strong>14:30 – 16:30 Practical demonstration of UC2 (Benedict Diedetrich, Ph.D., IPHT, Jena)?</strong><a class="headerlink" href="#practical-demonstration-of-uc2-benedict-diedetrich-ph-d-ipht-jena" title="Permalink to this heading">#</a></h3>
+<h3><strong>14:30 – 16:30 Practical demonstration of UC2 (Benedict Diedetrich, Ph.D., IPHT, Jena)?</strong><a class="headerlink" href="#practical-demonstration-of-uc2-benedict-diedetrich-ph-d-ipht-jena" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>practical demonstration of SIM UC2 microscope</p></li>
 </ul>
 </section>
 <section id="happy-wednesday-time">
-<h3><strong>16:30	Happy Wednesday Time</strong><a class="headerlink" href="#happy-wednesday-time" title="Permalink to this heading">#</a></h3>
+<h3><strong>16:30	Happy Wednesday Time</strong><a class="headerlink" href="#happy-wednesday-time" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The coffee break included Refreshments included</p></li>
 </ul>
 </section>
 </section>
 <section id="day-4">
-<h2><strong>Day 4</strong><a class="headerlink" href="#day-4" title="Permalink to this heading">#</a></h2>
+<h2><strong>Day 4</strong><a class="headerlink" href="#day-4" title="Link to this heading">#</a></h2>
 <section id="object-detection-using-stardist-jakub-soukup">
-<h3><strong>10:00 – 11:00 	Object Detection Using StarDist (Jakub Soukup)</strong><a class="headerlink" href="#object-detection-using-stardist-jakub-soukup" title="Permalink to this heading">#</a></h3>
+<h3><strong>10:00 – 11:00 	Object Detection Using StarDist (Jakub Soukup)</strong><a class="headerlink" href="#object-detection-using-stardist-jakub-soukup" title="Link to this heading">#</a></h3>
 <p><strong>11:00 – 11:15	Coffee break</strong></p>
 </section>
 <section id="introduction-to-napari-marcelo-leomil-zoccoler-ph-d-ut-dresden">
-<h3><strong>11:00 – 12:00 	Introduction to Napari (Marcelo Leomil Zoccoler, Ph.D., UT Dresden)</strong><a class="headerlink" href="#introduction-to-napari-marcelo-leomil-zoccoler-ph-d-ut-dresden" title="Permalink to this heading">#</a></h3>
+<h3><strong>11:00 – 12:00 	Introduction to Napari (Marcelo Leomil Zoccoler, Ph.D., UT Dresden)</strong><a class="headerlink" href="#introduction-to-napari-marcelo-leomil-zoccoler-ph-d-ut-dresden" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Bio-Image Processing Using Napari Plugins</p></li>
 <li><p>An Image Segmentation Workflow with Napari: from Images to Labels to Surfaces</p></li>
@@ -575,49 +595,49 @@ document.write(`
 <p><strong>11:00 – 12:00	Lunch</strong></p>
 </section>
 <section id="maker-institute-prague-3d-printing-from-design-to-fabrication-martin-schatz">
-<h3><strong>12:00 – 16:30 Maker Institute, Prague 3D Printing: From Design to Fabrication (Martin Schätz)</strong><a class="headerlink" href="#maker-institute-prague-3d-printing-from-design-to-fabrication-martin-schatz" title="Permalink to this heading">#</a></h3>
+<h3><strong>12:00 – 16:30 Maker Institute, Prague 3D Printing: From Design to Fabrication (Martin Schätz)</strong><a class="headerlink" href="#maker-institute-prague-3d-printing-from-design-to-fabrication-martin-schatz" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>The coffee break is included. Refreshments included</p></li>
 </ul>
 </section>
 </section>
 <section id="day-5">
-<h2><strong>Day 5</strong><a class="headerlink" href="#day-5" title="Permalink to this heading">#</a></h2>
+<h2><strong>Day 5</strong><a class="headerlink" href="#day-5" title="Link to this heading">#</a></h2>
 </section>
 <section id="zeiss-workshop">
-<h2><strong>Zeiss WORKSHOP</strong><a class="headerlink" href="#zeiss-workshop" title="Permalink to this heading">#</a></h2>
+<h2><strong>Zeiss WORKSHOP</strong><a class="headerlink" href="#zeiss-workshop" title="Link to this heading">#</a></h2>
 <p>Location: VMCF Microscopy Center, Viničná 7, Praha 2, study room B 311</p>
 <section id="introduction-to-airyscan-microscope-pavel-krist-ph-d-zeiss">
-<h3><strong>9:30 – 10:00 Introduction to Airyscan Microscope (Pavel Krist, Ph.D., Zeiss)</strong><a class="headerlink" href="#introduction-to-airyscan-microscope-pavel-krist-ph-d-zeiss" title="Permalink to this heading">#</a></h3>
+<h3><strong>9:30 – 10:00 Introduction to Airyscan Microscope (Pavel Krist, Ph.D., Zeiss)</strong><a class="headerlink" href="#introduction-to-airyscan-microscope-pavel-krist-ph-d-zeiss" title="Link to this heading">#</a></h3>
 </section>
 <section id="the-mesospim-and-open-hardware-microscopy-platforms-for-imaging-cleared-tissue-nikita-vladimirov-ph-d-uzh-zurich">
-<h3><strong>10:00- 10:30 The mesoSPIM and open-hardware microscopy platforms for imaging cleared tissue. (Nikita Vladimirov, Ph.D., UZH Zürich)</strong><a class="headerlink" href="#the-mesospim-and-open-hardware-microscopy-platforms-for-imaging-cleared-tissue-nikita-vladimirov-ph-d-uzh-zurich" title="Permalink to this heading">#</a></h3>
+<h3><strong>10:00- 10:30 The mesoSPIM and open-hardware microscopy platforms for imaging cleared tissue. (Nikita Vladimirov, Ph.D., UZH Zürich)</strong><a class="headerlink" href="#the-mesospim-and-open-hardware-microscopy-platforms-for-imaging-cleared-tissue-nikita-vladimirov-ph-d-uzh-zurich" title="Link to this heading">#</a></h3>
 <p><strong>10:30 – 10:45	Coffee break</strong></p>
 </section>
 <section id="handling-of-data-for-super-resolution-microscopy-in-arivis-big-data-3d-visualization-tracking-maurizio-abbate-ph-d-4d-vision">
-<h3><strong>10:45 – 12:15 Handling of data for super-resolution microscopy in ARIVIS - big data, 3D visualization, tracking ( Maurizio Abbate, Ph.D., 4D Vision)</strong><a class="headerlink" href="#handling-of-data-for-super-resolution-microscopy-in-arivis-big-data-3d-visualization-tracking-maurizio-abbate-ph-d-4d-vision" title="Permalink to this heading">#</a></h3>
+<h3><strong>10:45 – 12:15 Handling of data for super-resolution microscopy in ARIVIS - big data, 3D visualization, tracking ( Maurizio Abbate, Ph.D., 4D Vision)</strong><a class="headerlink" href="#handling-of-data-for-super-resolution-microscopy-in-arivis-big-data-3d-visualization-tracking-maurizio-abbate-ph-d-4d-vision" title="Link to this heading">#</a></h3>
 <p><strong>12:15 – 13:15	Lunch</strong></p>
 </section>
 <section id="practical-demonstration-mesospim-nikita-vladimirov-ph-d-uzh-zurich">
-<h3><strong>13:15 – 14:00 Practical demonstration MesoSPIM (Nikita Vladimirov, Ph.D., UZH Zürich)</strong><a class="headerlink" href="#practical-demonstration-mesospim-nikita-vladimirov-ph-d-uzh-zurich" title="Permalink to this heading">#</a></h3>
+<h3><strong>13:15 – 14:00 Practical demonstration MesoSPIM (Nikita Vladimirov, Ph.D., UZH Zürich)</strong><a class="headerlink" href="#practical-demonstration-mesospim-nikita-vladimirov-ph-d-uzh-zurich" title="Link to this heading">#</a></h3>
 <ul class="simple">
 <li><p>case studies with a practical demonstration of mesoSPIM and mesoSPIM software</p></li>
 </ul>
 </section>
 <section id="parallel-sessions">
-<h3>Parallel sessions<a class="headerlink" href="#parallel-sessions" title="Permalink to this heading">#</a></h3>
+<h3>Parallel sessions<a class="headerlink" href="#parallel-sessions" title="Link to this heading">#</a></h3>
 <section id="practical-demonstration-of-airyscan-microscope-pavel-krist-ph-d-zeiss">
-<h4><strong>14:00 – 14:45</strong> <strong>Practical demonstration of  Airyscan Microscope ( Pavel Krist, Ph.D., Zeiss)</strong><a class="headerlink" href="#practical-demonstration-of-airyscan-microscope-pavel-krist-ph-d-zeiss" title="Permalink to this heading">#</a></h4>
+<h4><strong>14:00 – 14:45</strong> <strong>Practical demonstration of  Airyscan Microscope ( Pavel Krist, Ph.D., Zeiss)</strong><a class="headerlink" href="#practical-demonstration-of-airyscan-microscope-pavel-krist-ph-d-zeiss" title="Link to this heading">#</a></h4>
 </section>
 <section id="practical-demonstration-arivis-maurizio-abbate-4d-vision">
-<h4><strong>14:00 – 14:45 Practical demonstration ARIVIS (Maurizio Abbate, 4D Vision)</strong><a class="headerlink" href="#practical-demonstration-arivis-maurizio-abbate-4d-vision" title="Permalink to this heading">#</a></h4>
+<h4><strong>14:00 – 14:45 Practical demonstration ARIVIS (Maurizio Abbate, 4D Vision)</strong><a class="headerlink" href="#practical-demonstration-arivis-maurizio-abbate-4d-vision" title="Link to this heading">#</a></h4>
 <p><strong>15:45 – 16:00	Coffee break</strong></p>
 </section>
 <section id="id1">
-<h4><strong>16:00 – 16:45 Practical demonstration of  Airyscan Microscope (Pavel Krist, Ph.D. Zeiss)</strong><a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h4>
+<h4><strong>16:00 – 16:45 Practical demonstration of  Airyscan Microscope (Pavel Krist, Ph.D. Zeiss)</strong><a class="headerlink" href="#id1" title="Link to this heading">#</a></h4>
 </section>
 <section id="practical-demonstration-arivis-maurizio-abbate-ph-d-4d-vision">
-<h4><strong>16:00 – 16:45  Practical demonstration ARIVIS (Maurizio Abbate, Ph.D. 4D Vision)</strong><a class="headerlink" href="#practical-demonstration-arivis-maurizio-abbate-ph-d-4d-vision" title="Permalink to this heading">#</a></h4>
+<h4><strong>16:00 – 16:45  Practical demonstration ARIVIS (Maurizio Abbate, Ph.D. 4D Vision)</strong><a class="headerlink" href="#practical-demonstration-arivis-maurizio-abbate-ph-d-4d-vision" title="Link to this heading">#</a></h4>
 </section>
 </section>
 </section>
@@ -650,7 +670,7 @@ document.write(`
               
               
               
-                <footer class="prev-next-footer">
+                <footer class="prev-next-footer d-print-none">
                   
 <div class="prev-next-area">
 </div>
@@ -661,6 +681,7 @@ document.write(`
             
               
                 <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
 
   <div class="sidebar-secondary-item">
   <div class="page-toc tocsection onthispage">
@@ -765,8 +786,8 @@ By Martin Schätz
   </div>
   
   <!-- Scripts loaded after <body> so the DOM is not blocked -->
-  <script src="../_static/scripts/bootstrap.js?digest=5b4479735964841361fd"></script>
-<script src="../_static/scripts/pydata-sphinx-theme.js?digest=5b4479735964841361fd"></script>
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
 
   <footer class="bd-footer">
   </footer>

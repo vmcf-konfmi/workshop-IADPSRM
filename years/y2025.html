@@ -1,0 +1,683 @@
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="../" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>BioImage Analysis and Data Processing Workshop 2025 &#8212; Image Analysis and Data Processing in Super-Resolution Microscopy</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.2/css/all.min.css?digest=dfe6caa3a7d634c4db9b" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.2/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css?v=eba8b062" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css?v=13237357" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css?v=4fa983c6" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.min.css?v=95c83b7e" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b" />
+  <script src="../_static/vendor/fontawesome/6.5.2/js/all.min.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+    <script src="../_static/documentation_options.js?v=9eb32ce0"></script>
+    <script src="../_static/doctools.js?v=9a2dae69"></script>
+    <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+    <script src="../_static/copybutton.js?v=f281be69"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js?v=887ef09a"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js?v=4a39c7ea"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js?v=36754332"></script>
+    <script async="async" src="https://www.googletagmanager.com/gtag/js?id=G-4LMQCGKP1G"></script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-4LMQCGKP1G');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js?v=c100c467"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script>
+                window.dataLayer = window.dataLayer || [];
+                function gtag(){ dataLayer.push(arguments); }
+                gtag('js', new Date());
+                gtag('config', 'G-4LMQCGKP1G');
+            </script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'years/y2025';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="BioImage Analysis and Data Processing 2024" href="y2024.html" />
+    <link rel="prev" title="Welcome to Image Analysis and Data Processing in Super-Resolution Microscopy" href="../intro.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <div id="pst-skip-link" class="skip-link d-print-none"><a href="#main-content">Skip to main content</a></div>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>Back to top</button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-primary-sidebar-checkbox"/>
+  <label class="overlay overlay-primary" for="pst-primary-sidebar-checkbox"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          id="pst-secondary-sidebar-checkbox"/>
+  <label class="overlay overlay-secondary" for="pst-secondary-sidebar-checkbox"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <div class="pst-async-banner-revealer d-none">
+  <aside id="bd-header-version-warning" class="d-none d-print-none" aria-label="Version warning"></aside>
+</div>
+
+  
+    <header class="bd-header navbar navbar-expand-lg bd-navbar d-print-none">
+    </header>
+  
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+    
+  
+
+<a class="navbar-brand logo" href="../intro.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Image Analysis and Data Processing in Super-Resolution Microscopy - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Image Analysis and Data Processing in Super-Resolution Microscopy - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../intro.html">
+                    Welcome to Image Analysis and Data Processing in Super-Resolution Microscopy
+                </a>
+            </li>
+        </ul>
+        <ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">BioImage Analysis and Data Processing Workshop 2025</a></li>
+<li class="toctree-l1"><a class="reference internal" href="y2024.html">BioImage Analysis and Data Processing 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="y2023.html">Image Analysis and Data Processing (not only) in Super-Resolution Microscopy 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="y2022.html">Image Analysis and Data Processing in Super-Resolution Microscopy 2022</a></li>
+<li class="toctree-l1"><a class="reference internal" href="y2021.html">Image Analysis and Data Processing in Super-Resolution Microscopy 2021</a></li>
+<li class="toctree-l1"><a class="reference internal" href="y2020.html">Image Analysis and Data Processing in Super-Resolution Microscopy 2020</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main" role="main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article d-print-none">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><button class="sidebar-toggle primary-toggle btn btn-sm" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</button></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-source-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Source repositories">
+    <i class="fab fa-github"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://github.com/martinschatz-cz/workshop-IADPSRM" target="_blank"
+   class="btn btn-sm btn-source-repository-button dropdown-item"
+   title="Source repository"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fab fa-github"></i>
+  </span>
+<span class="btn__text-container">Repository</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li><a href="https://github.com/martinschatz-cz/workshop-IADPSRM/issues/new?title=Issue%20on%20page%20%2Fyears/y2025.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button dropdown-item"
+   title="Open an issue"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+<span class="btn__text-container">Open issue</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/years/y2025.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm nav-link pst-navbar-icon theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="theme-switch fa-solid fa-sun fa-lg" data-mode="light"></i>
+    <i class="theme-switch fa-solid fa-moon fa-lg" data-mode="dark"></i>
+    <i class="theme-switch fa-solid fa-circle-half-stroke fa-lg" data-mode="auto"></i>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm pst-navbar-icon search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<button class="sidebar-toggle secondary-toggle btn btn-sm" title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</button>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>BioImage Analysis and Data Processing Workshop 2025</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-at-a-glance">Program at a Glance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-program">Full Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1">Day 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2">Day 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-3">Day 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-4">Day 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-5">Day 5</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="bioimage-analysis-and-data-processing-workshop-2025">
+<h1>BioImage Analysis and Data Processing Workshop 2025<a class="headerlink" href="#bioimage-analysis-and-data-processing-workshop-2025" title="Link to this heading">#</a></h1>
+<p><strong>Date:</strong> June 30 – July 4, 2025<br />
+<strong>Location:</strong> Room B311 - VMCF Microscopy Facility, Vinicna 7, Prague, Czechia<br />
+<strong>Form:</strong> Hybrid form of presentations; hands-on sessions are in-person only<br />
+<strong>Time Zone:</strong> All times are in CEST (GMT+2)</p>
+<hr class="docutils" />
+<section id="program-at-a-glance">
+<h2>Program at a Glance<a class="headerlink" href="#program-at-a-glance" title="Link to this heading">#</a></h2>
+<ul class="simple">
+<li><p><strong>Day 1:</strong> Deconvolution and ThunderSTORM</p></li>
+<li><p><strong>Day 2:</strong> CellPose and TrackMate</p></li>
+<li><p><strong>Day 3:</strong> Napari</p></li>
+<li><p><strong>Day 4:</strong> mesoSPIM + Leica AIVIA</p></li>
+<li><p><strong>Day 5:</strong> Affordable microscopes based on 3D printing and smartphones + Bioimage analysis community</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="full-program">
+<h2>Full Program<a class="headerlink" href="#full-program" title="Link to this heading">#</a></h2>
+<section id="day-1">
+<h3>Day 1<a class="headerlink" href="#day-1" title="Link to this heading">#</a></h3>
+<p><strong>10:00 – 11:00</strong><br />
+Registration (outside Room B332)<br />
+<em>Optional: software installation on your own laptops</em></p>
+<p><strong>11:00 – 11:15</strong><br />
+Welcome note from VMCF</p>
+<ul class="simple">
+<li><p>Miroslav Hyliš, Ph.D.</p></li>
+<li><p>Martin Schätz, Ph.D.</p></li>
+<li><p>Zuzana Burdíková, Ph.D.</p></li>
+</ul>
+<p><strong>11:25 – 12:00</strong><br />
+<em>Introduction to super-resolution microscopy</em><br />
+<em>Zuzana Burdíková, Ph.D.</em></p>
+<ul class="simple">
+<li><p>Image Formation in Fluorescence Microscopy</p></li>
+<li><p>Resolution and Noise</p></li>
+<li><p>Single-molecule localization microscopy (STORM, PALM, DNA-PAINT, …)</p></li>
+<li><p>Structured Illumination Microscopy (SIM)</p></li>
+</ul>
+<p><strong>12:00 – 13:20</strong><br />
+Lunch</p>
+<p><strong>13:20 – 14:00</strong><br />
+<em>Deconvolution of optical microscopy images</em><br />
+<em>Prof. Rainer Heintzmann, IPHT, Jena</em></p>
+<p><strong>14:00 – 14:10</strong><br />
+Coffee break</p>
+<p><strong>14:10 – 14:50</strong><br />
+<em>Introduction to Image processing in FIJI, ImageJ</em><br />
+<em>Karel Stepka, Ph.D.</em></p>
+<ul class="simple">
+<li><p>Two-channel colocalization</p></li>
+<li><p>p-Value of colocalization, data filtering</p></li>
+<li><p>Quantitative analysis</p></li>
+<li><p>Data visualization, 3D visualization</p></li>
+<li><p>Image export
+<strong>14:50 – 15:10</strong><br />
+Coffee break</p></li>
+</ul>
+<p><strong>15:10 – 15:50</strong><br />
+<em>ThunderSTORM software Introduction</em><br />
+<em>Zdenek Svindrych, Ph.D.</em></p>
+<ul class="simple">
+<li><p>Rationale and features
+<strong>16:00 – 17:00</strong><br />
+<em>ThunderSTORM software hands-on</em><br />
+<em>Zdenek Svindrych, Ph.D.</em></p></li>
+<li><p>Installation</p></li>
+<li><p>Processing 2D and 3D STORM datasets</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="day-2">
+<h3>Day 2<a class="headerlink" href="#day-2" title="Link to this heading">#</a></h3>
+<p><strong>10:00 – 12:00</strong><br />
+<em>CellPose</em></p>
+<ul class="simple">
+<li><p>Introduction, installation</p></li>
+<li><p>Running pretrained/custom models</p></li>
+<li><p>Model retraining</p></li>
+<li><p><a class="reference external" href="https://doi.org/10.6084/m9.figshare.24441214.v2">Cellpose model cheatsheet</a></p></li>
+</ul>
+<p><em>CellPose segmentation + Tracking</em></p>
+</section>
+<hr class="docutils" />
+<section id="day-3">
+<h3>Day 3<a class="headerlink" href="#day-3" title="Link to this heading">#</a></h3>
+<p><strong>10:00 – 12:00</strong><br />
+<em>Napari Morning Session</em><br />
+<em>Marcelo Leomil Zoccoler, Ph.D. (TU Dresden)</em></p>
+<p><strong>12:00 – 13:00</strong><br />
+Lunch</p>
+<p><strong>13:00 – 16:00</strong><br />
+<em>Napari Afternoon Session</em><br />
+<em>Marcelo Leomil Zoccoler, Ph.D. &amp; Martin Schätz, Ph.D.</em></p>
+</section>
+<hr class="docutils" />
+<section id="day-4">
+<h3>Day 4<a class="headerlink" href="#day-4" title="Link to this heading">#</a></h3>
+<p><strong>10:00 – 12:00</strong><br />
+<em>Benchtop mesoSPIM: open-source light-sheet microscope</em><br />
+<em>Marco Garbelli, Ph.D.</em></p>
+<ul class="simple">
+<li><p>Project introduction</p></li>
+<li><p>Remote demo</p></li>
+<li><p>Data visualization in Fiji/BigStitcher and 3DScript</p></li>
+</ul>
+<p><strong>12:00 – 13:00</strong><br />
+Lunch</p>
+<p><strong>13:00 – 14:00</strong><br />
+<em>Introduction to AIVIA analysis from Leica Microsystems</em></p>
+<ul class="simple">
+<li><p>AIVIA overview</p></li>
+<li><p>LAS X + AIVIA Rare Events</p></li>
+<li><p>Adaptive deconvolution</p></li>
+</ul>
+<p><strong>14:00 – 16:00</strong><br />
+<em>Hands-on session on AIVIA online</em></p>
+<ul class="simple">
+<li><p>License installation</p></li>
+<li><p>Demo data showcase</p></li>
+<li><p>User data testing</p></li>
+</ul>
+</section>
+<hr class="docutils" />
+<section id="day-5">
+<h3>Day 5<a class="headerlink" href="#day-5" title="Link to this heading">#</a></h3>
+<p><strong>10:00 – 11:00</strong><br />
+<em>Affordable microscopes based on 3D-printing and smartphones</em><br />
+<em>Prof. Rainer Heintzmann, IPHT, Jena</em></p>
+<p><strong>11:00 – 11:30</strong><br />
+<em>Image analysis communities</em><br />
+<em>Martin Schätz, Ph.D.</em></p>
+<hr class="docutils" />
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./years"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer d-print-none">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../intro.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Welcome to Image Analysis and Data Processing in Super-Resolution Microscopy</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="y2024.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">BioImage Analysis and Data Processing 2024</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#program-at-a-glance">Program at a Glance</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#full-program">Full Program</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-1">Day 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-2">Day 2</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-3">Day 3</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-4">Day 4</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#day-5">Day 5</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Martin Schätz
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  <p class="copyright">
+    
+      © Copyright 2023.
+      <br/>
+    
+  </p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=dfe6caa3a7d634c4db9b"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=dfe6caa3a7d634c4db9b"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
